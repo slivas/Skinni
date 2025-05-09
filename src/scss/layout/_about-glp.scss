@@ -18,7 +18,7 @@
 
     @media (min-width: 1280px) {
       grid-template-columns: 624px 1fr;
-      grid-column-gap: 100px;
+      grid-column-gap: 180px;
     }
   }
 
@@ -95,6 +95,10 @@
       letter-spacing: 2.141px;
       text-transform: uppercase;
       color: #00B8D4;
+
+      @media (min-width: 1280px) {
+        max-width: 80%;
+      }
     }
   }
 }

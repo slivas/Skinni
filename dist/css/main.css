@@ -445,6 +445,7 @@ header .container {
 @media (min-width: 1280px) {
   .hero__title {
     padding-top: 140px;
+    padding-left: 0;
   }
 }
 @media (min-width: 1440px) {
@@ -536,7 +537,9 @@ header .container {
 }
 @media (min-width: 1280px) {
   .hero__description {
-    max-width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+    padding-left: 0;
     align-items: flex-start;
     font-size: 20px;
     background-color: transparent;
@@ -566,7 +569,7 @@ header .container {
 @media (min-width: 1280px) {
   .about-glp .container {
     grid-template-columns: 624px 1fr;
-    grid-column-gap: 100px;
+    grid-column-gap: 180px;
   }
 }
 .about-glp__section-title {
@@ -636,6 +639,11 @@ header .container {
   letter-spacing: 2.141px;
   text-transform: uppercase;
   color: #00B8D4;
+}
+@media (min-width: 1280px) {
+  .about-glp__text-wrapper h3 {
+    max-width: 80%;
+  }
 }
 
 .options {
@@ -1083,6 +1091,7 @@ header .container {
 }
 
 .advantages__section-title {
+  display: grid;
   margin-bottom: 42px;
   font-size: 32px;
   font-weight: 300;
@@ -1094,7 +1103,6 @@ header .container {
 }
 @media (min-width: 768px) {
   .advantages__section-title {
-    display: grid;
     margin-bottom: 68px;
     grid-row-gap: 12px;
     font-size: 38px;
