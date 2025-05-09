@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap');
+
+body {
+  font: {
+    family: "Alexandria", sans-serif;
+    size: 16px;
+    optical-sizing: auto;
+  }
+  line-height: normal;
+  color: #545454;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+}

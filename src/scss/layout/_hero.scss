@@ -1,0 +1,145 @@
+.hero {
+  padding-top: 154px;
+  padding-bottom: 44px;
+  background-image: url("../images/hero-decor.svg");
+  background-repeat: no-repeat;
+  background-position: center top 32px;
+  background-size: 183%;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+    background-size: cover;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 194px;
+  }
+
+  @media (min-width: 1280px) {
+    background-size: 1100px;
+    background-position: right -270px top -40px;
+  }
+
+  .container {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+      padding-top: 60px;
+      padding-left: 50px;
+    }
+
+    @media (min-width: 1280px) {
+      padding-top: 140px;
+    }
+
+    @media (min-width: 1440px) {
+      padding-top: 180px;
+    }
+
+    &-text {
+      margin-bottom: 2px;
+      font: {
+        size: 18px;
+        weight: 300;
+      }
+      color: #929292;
+
+      @media (min-width: 1280px) {
+        font-size: 22px;
+      }
+    }
+
+    h1 {
+      display: grid;
+      line-height: .9;
+      text-transform: uppercase;
+    }
+
+    &-name {
+      margin-bottom: 6px;
+      font: {
+        size: 72px;
+        weight: 400;
+      }
+      letter-spacing: 2.666px;
+      color: #00B8D4;
+
+      @media (min-width: 1280px) {
+        font-size: 142px;
+        line-height: .9;
+      }
+    }
+
+    &-description {
+      font: {
+        size: 20px;
+        weight: 300;
+      }
+      letter-spacing: 2.141px;
+
+      @media (min-width: 1280px) {
+        font-size: 42px;
+        line-height: .9;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 768px) {
+      grid-row: span 2;
+    }
+
+    @media (min-width: 1280px) {
+      width: 440px;
+      margin-right: 60px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 540px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    row-gap: 18px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    background-color: #fff;
+    color: #020202;
+    font: {
+      size: 20px;
+      weight: 300;
+    }
+    line-height: 140%;
+
+    @media (min-width: 768px) {
+      margin-right: 0;
+      margin-left: 40px;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 100%;
+      align-items: flex-start;
+      font-size: 20px;
+      background-color: transparent;
+    }
+  }
+}
