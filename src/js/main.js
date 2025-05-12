@@ -112,32 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
         tabButtons[0].click();
     }
 
-    //Country select
-    const toggle = document.querySelector('.selector-toggle');
-    const list   = document.querySelector('.country-list');
-    const flag   = toggle.querySelector('.flag');
+    //Anchor smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const id = this.getAttribute('href').substring(1);
+            const target = document.getElementById(id);
+            if (!target) return;
 
-    toggle.addEventListener('click', () => {
-        list.style.display = list.style.display === 'block' ? 'none' : 'block';
+            const headerHeight = document.querySelector('header').offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const scrollToPosition = targetPosition - headerHeight;
+
+            document.body.classList.remove('show-menu');
+
+            window.scrollTo({
+                top: scrollToPosition,
+                behavior: 'smooth'
+            });
+        });
     });
 
-    list.addEventListener('click', e => {
-        const item = e.target.closest('li');
-        if (!item) return;
-
-        flag.src       = `dist/flags/${item.dataset.flag}`;
-        flag.alt       = item.dataset.flag.split('.')[0];
-
-        list.style.display = 'none';
-
-        document.querySelector('.phone-field').value = item.dataset.code + ' ';
-    });
-
-    document.addEventListener('click', e => {
-        if (!e.target.closest('.country-selector')) {
-            list.style.display = 'none';
-        }
-    });
 
 });
 
