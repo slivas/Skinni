@@ -120,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const target = document.getElementById(id);
             if (!target) return;
 
-            const headerHeight = document.querySelector('header').offsetHeight;
+            // const headerHeight = document.querySelector('header').offsetHeight;
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-            const scrollToPosition = targetPosition - headerHeight;
+            const scrollToPosition = targetPosition;
 
             document.body.classList.remove('show-menu');
 
