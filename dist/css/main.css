@@ -1551,7 +1551,7 @@ footer {
   display: grid;
   grid-row-gap: 22px;
 }
-.footer__item-contacts-list .address, .footer__item-contacts-list a {
+.footer__item-contacts-list a {
   position: relative;
   padding-left: 26px;
   background-repeat: no-repeat;
@@ -1565,7 +1565,7 @@ footer {
 .footer__item-contacts-list .phone a {
   background-image: url("../images/phone-icon.svg");
 }
-.footer__item-contacts-list .address {
+.footer__item-contacts-list .address a {
   background-image: url("../images/marker-icon.svg");
   background-position: left top -2px;
 }

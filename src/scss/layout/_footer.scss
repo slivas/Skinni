@@ -112,7 +112,7 @@ footer {
     display: grid;
     grid-row-gap: 22px;
 
-    .address, a {
+    a {
       position: relative;
       padding-left: 26px;
       background-repeat: no-repeat;
@@ -130,7 +130,7 @@ footer {
       background-image: url("../images/phone-icon.svg");
     }
 
-    .address {
+    .address a {
       background-image: url("../images/marker-icon.svg");
       background-position: left top -2px;
     }
