@@ -1553,6 +1553,7 @@ footer {
 }
 .footer__item-contacts-list a {
   position: relative;
+  display: block;
   padding-left: 26px;
   background-repeat: no-repeat;
 }
