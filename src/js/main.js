@@ -24,7 +24,7 @@ window.addEventListener('resize', initSwiper);
 
 document.addEventListener('DOMContentLoaded', () => {
     //Slider
-    let swiper = new Swiper(".images-slider", {
+    let imagesSlider = new Swiper(".images-slider", {
         slidesPerView: 1,
         spaceBetween: 10,
         centeredSlides: true,
@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     });
+
+    imagesSlider.slideTo(1, false,false);
 
     // Header Show/Hide
     let didScroll = false;
