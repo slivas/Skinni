@@ -23,6 +23,25 @@ window.addEventListener('DOMContentLoaded', initSwiper);
 window.addEventListener('resize', initSwiper);
 
 document.addEventListener('DOMContentLoaded', () => {
+    //Slider
+    let swiper = new Swiper(".images-slider", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            1280: {
+                slidesPerView: 3,
+            },
+        },
+    });
+
     // Header Show/Hide
     let didScroll = false;
     let lastScrollTop = 0;

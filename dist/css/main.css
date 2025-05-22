@@ -1186,6 +1186,42 @@ header .container {
   color: #020202;
 }
 
+.images-slider {
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-theme-color: #00B8D4;
+}
+.images-slider .swiper-pagination {
+  position: static;
+  margin-top: 16px;
+}
+.images-slider .swiper-slide {
+  overflow: hidden;
+  transition-duration: 0.25s;
+}
+.images-slider .swiper-slide img {
+  height: 100%;
+  max-width: none;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .images-slider .swiper-slide {
+    height: 33vw;
+    border-radius: 8px;
+    transform: scale(0.8);
+  }
+}
+@media (min-width: 1280px) {
+  .images-slider .swiper-slide {
+    height: 400px;
+  }
+}
+.images-slider .swiper-slide-active {
+  transform: scale(1);
+}
+
 .reviews {
   background-image: url("../images/reviews-bg.svg");
   background-repeat: no-repeat;

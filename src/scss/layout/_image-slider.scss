@@ -1,0 +1,36 @@
+.images-slider {
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-theme-color: #00B8D4;
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 16px;
+  }
+
+  .swiper-slide {
+    overflow: hidden;
+    transition-duration: .25s;
+
+    img {
+      height: 100%;
+      max-width: none;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+      height: 33vw;
+      border-radius: 8px;
+      transform: scale(.8);
+    }
+
+    @media (min-width: 1280px) {
+      height: 400px;
+    }
+
+    &-active {
+      transform: scale(1);
+    }
+  }
+}
