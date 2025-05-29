@@ -1,0 +1,54 @@
+.thank-you {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  padding: 40px 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    justify-content: center;
+
+    .logo__name {
+      font-size: 48px;
+
+      @media (min-width: 768px) {
+        font-size: 66px;
+        line-height: 1;
+      }
+    }
+
+    .logo__description {
+      @media (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 48px;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+  }
+
+  &__description {
+    max-width: 396px;
+    font: {
+      size: 20px;
+      weight: 300;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 440px;
+      font-size: 24px;
+    }
+  }
+}
